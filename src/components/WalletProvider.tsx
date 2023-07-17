@@ -1,5 +1,4 @@
 "use client";
-// import { CardanoProvider, UseCardanoOptions } from "use-cardano";
 import dynamic from "next/dynamic";
 import { UseCardanoOptions } from "use-cardano";
 // const options: UseCardanoOptions = {
@@ -16,10 +15,11 @@ const CardanoProvider = dynamic(
   }
 );
 
+//TODO: this needs to be in server component
 const options: UseCardanoOptions = {
   node: {
     provider: "blockfrost",
-    projectId: "preprodOr3zZOkFc8Sqa5sp3aa9oGTb1wxulzhy",
+    projectId: process.env.BLOCKFROST_KEY,
   },
   testnetNetwork: "Preprod",
   allowedNetworks: ["Testnet"],

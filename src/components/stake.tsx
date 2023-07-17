@@ -10,13 +10,13 @@ const Stake = () => {
     //         <h1>enabledWallet</h1> :
     //     </>
     // )
-  // return (
-  //   <>
-  //     <div className="flex-none">
-  //       <a className="btn btn-outline btn-primary text-xl">Connect</a>
-  //     </div>
-  //   </>
-  // );
+  return (
+    <>
+      <div className="flex-none">
+        <a className="btn btn-outline btn-primary text-xl">Connect</a>
+      </div>
+    </>
+  );
 };
 
 export default Stake;
