@@ -2,6 +2,8 @@
 import dynamic from "next/dynamic";
 import Image from "next/image";
 const WalletConnect = dynamic(() => import("./WalletConnect"), { ssr: false });
+const WalletConnect2 = dynamic(() => import("./WalletConnect2"), { ssr: false });
+const WalletConnect3 = dynamic(() => import("./WalletConnect3"), { ssr: false });
 
 export default function NavBar() {
   return (
@@ -15,7 +17,8 @@ export default function NavBar() {
           priority
         />
       </div>
-      <WalletConnect />
+      {/* <WalletConnect /> */}
+      <WalletConnect2 />
     </div>
   );
 }

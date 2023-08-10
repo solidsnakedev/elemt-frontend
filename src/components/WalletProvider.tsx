@@ -19,7 +19,7 @@ const CardanoProvider = dynamic(
 const options: UseCardanoOptions = {
   node: {
     provider: "blockfrost",
-    projectId: process.env.BLOCKFROST_KEY,
+    projectId: process.env.BLOCKFROST_KEY
   },
   testnetNetwork: "Preprod",
   allowedNetworks: ["Testnet"],

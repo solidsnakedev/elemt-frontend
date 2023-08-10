@@ -15,9 +15,11 @@ const WalletModal = () => {
     availableProviders,
     walletApi,
     setWalletProvider,
-    walletProvider,
     account,
+    lucid,
+    setLucid
   } = useCardano();
+
   return (
     <div>
       {/* Open the modal using ID.showModal() method */}
