@@ -17,8 +17,7 @@ export default function NavBar() {
           priority
         />
       </div>
-      {/* <WalletConnect /> */}
-      <WalletConnect2 />
+      <WalletConnect />
     </div>
   );
 }
