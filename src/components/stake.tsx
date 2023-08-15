@@ -4,13 +4,7 @@ import { useCardano } from "use-cardano";
 
 const Stake = () => {
   const { walletProvider, setWalletProvider, account, lucid } = useCardano();
-  //
 
-  // return (
-  //     <>
-  //         <h1>enabledWallet</h1> :
-  //     </>
-  // )
   const handleRegister = async () => {
     if (lucid) {
       const rewardAddress = await lucid.wallet.rewardAddress();
