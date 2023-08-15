@@ -37,7 +37,7 @@ const Stake = () => {
   return (
     <div className="flex flex-col items-center gap-3 sm:gap-6 lg:gap-8">
       <button className="btn btn-outline" onClick={handleRegister}>
-        Register
+        Register Wallet
       </button>
       <button className="btn btn-outline" onClick={handleStake}>
         Stake
