@@ -6,9 +6,9 @@ const WalletConnect = () => {
   const { setWalletProvider, account } = useCardano();
 
   return (
-    <div className="flex items-center gap-3 sm:gap-6 lg:gap-8">
+    <div className="flex flex-wrap items-center gap-3 sm:gap-6 lg:gap-8">
       {account.address ? (
-        <div className="flex items-center gap-3 sm:gap-6 lg:gap-8">
+        <div className="flex flex-wrap items-center gap-3 sm:gap-6 lg:gap-8">
           <h1>
             {account.address.slice(0, 10)}
             {"..."}

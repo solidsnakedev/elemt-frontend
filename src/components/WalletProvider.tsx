@@ -22,7 +22,7 @@ const options: UseCardanoOptions = {
     projectId: process.env.BLOCKFROST_KEY
   },
   testnetNetwork: "Preprod",
-  allowedNetworks: ["Testnet"],
+  allowedNetworks: ["Mainnet"],
 };
 
 export default function WalletProvider({
