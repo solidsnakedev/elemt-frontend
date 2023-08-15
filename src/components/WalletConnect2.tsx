@@ -1,6 +1,6 @@
 "use client";
 import { useCardano } from "@cardano-foundation/cardano-connect-with-wallet";
-import { NetworkType } from "@cardano-foundation/cardano-connect-with-wallet-core";
+import {NetworkType} from "@cardano-foundation/cardano-connect-with-wallet-core";
 import WalletModal2 from "./WalletModal2";
 
 const WalletConnect2 = () => {

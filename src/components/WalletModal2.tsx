@@ -1,7 +1,8 @@
 "use client";
 
 import { useCardano } from "@cardano-foundation/cardano-connect-with-wallet";
-import { NetworkType } from "@cardano-foundation/cardano-connect-with-wallet-core";
+import {NetworkType} from "@cardano-foundation/cardano-connect-with-wallet-core";
+import { decode } from "cborg";
 
 declare global {
   interface Window {
@@ -26,6 +27,18 @@ const WalletModal2 = () => {
   console.log(isEnabled);
   console.log(enabledWallet);
   console.log(usedAddresses);
+  console.log(
+    window.cardano["nami"].enable().then((value) => {
+      value.getBalance().then((value) => {
+        console.log("cbor", value);
+        const balance = decode(Buffer.from(value, "hex"), { useMaps: true });
+        console.log(
+          "balance",
+          Array.isArray(balance) ? balance[0] / 1_000_000 : balance / 1_000_000
+        );
+      });
+    })
+  );
 
   return (
     <div>
