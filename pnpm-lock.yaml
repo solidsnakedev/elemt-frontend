@@ -1575,8 +1575,8 @@ packages:
     resolution: {integrity: sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==}
     dev: false
 
-  /@cardano-foundation/cardano-connect-with-wallet-core@0.2.2:
-    resolution: {integrity: sha512-3BmR5S6DFgLeQAjS4QmUs8NsUaeBVzbMzFARMJEOSAOH0KSU5ndePIQmDDG9dB2/I7O8gv2oILrNGTaTf50GGw==}
+  /@cardano-foundation/cardano-connect-with-wallet-core@0.2.3:
+    resolution: {integrity: sha512-BtrivcGziHZO3Il5TGeEDX9YizykcGuCFpAciOP48FsLxXgdHqmtZ7beWfwLFZ/5Yv5cam1+BOpQDZjHuiHHHg==}
     dependencies:
       bech32: 2.0.0
       buffer: 6.0.3
@@ -1645,7 +1645,7 @@ packages:
       react: '>=18.2.0'
       react-dom: '>=18.2.0'
     dependencies:
-      '@cardano-foundation/cardano-connect-with-wallet-core': 0.2.2
+      '@cardano-foundation/cardano-connect-with-wallet-core': 0.2.3
       '@fabianbormann/cardano-peer-connect': 1.2.13
       buffer: 6.0.3
       color: 4.2.3
