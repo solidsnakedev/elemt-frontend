@@ -3,7 +3,7 @@
 import { useCardano } from "use-cardano";
 
 const Stake = () => {
-  const { walletProvider, setWalletProvider, account, lucid } = useCardano();
+  const { lucid } = useCardano();
 
   const handleRegister = async () => {
     if (lucid) {
