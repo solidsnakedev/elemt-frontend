@@ -1,6 +1,5 @@
 import Main from "@/components/Main";
 import NavBar from "@/components/NavBar";
-import Stake from "@/components/Stake";
 import Image from "next/image";
 
 export default async function Home() {
