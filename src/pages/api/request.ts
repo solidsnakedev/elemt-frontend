@@ -30,7 +30,7 @@ export default async function handler(
       .newTx()
       .delegateTo(
         rewardAddress!,
-        "pool1vntql3yhyzzm3p846mds33nmuzz30jrn56fvjdd3hhu9u5n9d4d"
+        "pool19ut4284xy9p82dd0cglzxweddfqw73yennkjk6mmp650chnr6lz"
       )
       .complete();
     res.status(200).json({ tx: tx.toString() });
