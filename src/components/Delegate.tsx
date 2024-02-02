@@ -4,7 +4,7 @@ import { useCardano } from "@cardano-foundation/cardano-connect-with-wallet";
 import { NetworkType } from "@cardano-foundation/cardano-connect-with-wallet-core";
 import { Lucid } from "lucid-cardano";
 
-const Stake = () => {
+const Delegate = () => {
   const { isConnected, usedAddresses, enabledWallet } = useCardano({
     limitNetwork: NetworkType.TESTNET,
   });
@@ -39,4 +39,4 @@ const Stake = () => {
   );
 };
 
-export default Stake;
+export default Delegate;
