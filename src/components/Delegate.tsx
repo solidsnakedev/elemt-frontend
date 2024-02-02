@@ -5,8 +5,12 @@ import { NetworkType } from "@cardano-foundation/cardano-connect-with-wallet-cor
 import { Lucid } from "lucid-cardano";
 
 const Delegate = () => {
+  const network =
+    process.env.NODE_ENV === "development"
+      ? NetworkType.TESTNET
+      : NetworkType.MAINNET;
   const { isConnected, usedAddresses, enabledWallet } = useCardano({
-    limitNetwork: NetworkType.TESTNET,
+    limitNetwork: network,
   });
   const handleAPI = async () => {
     if (isConnected && enabledWallet) {

@@ -11,8 +11,12 @@ declare global {
 }
 
 const WalletModal = () => {
+  const network =
+    process.env.NODE_ENV === "development"
+      ? NetworkType.TESTNET
+      : NetworkType.MAINNET;
   const { isConnected, connect, installedExtensions } = useCardano({
-    limitNetwork: NetworkType.TESTNET,
+    limitNetwork: network,
   });
 
   return (
