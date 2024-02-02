@@ -1,23 +1,28 @@
 "use client";
-import { useCardano } from "use-cardano";
+import { useCardano } from "@cardano-foundation/cardano-connect-with-wallet";
+import { NetworkType } from "@cardano-foundation/cardano-connect-with-wallet-core";
 import WalletModal from "./WalletModal";
 
-const WalletConnect = () => {
-  const { setWalletProvider, account } = useCardano();
+const WalletConnect2 = () => {
+  const { isConnected, stakeAddress, disconnect, accountBalance } = useCardano({
+    limitNetwork: NetworkType.TESTNET,
+  });
 
   return (
-    <div className="flex flex-wrap items-center gap-3 sm:gap-6 lg:gap-8">
-      {account.address ? (
-        <div className="flex flex-wrap items-center gap-3 sm:gap-6 lg:gap-8">
+    <div className="flex items-center gap-3 sm:gap-6 lg:gap-8">
+      {isConnected ? (
+        <div className="flex items-center gap-3 sm:gap-6 lg:gap-8">
           <h1>
-            {account.address.slice(0, 10)}
+            {stakeAddress!.slice(0, 10)}
             {"..."}
-            {account.address.slice(account.address.length - 6)}
+            {stakeAddress!.slice(stakeAddress!.length - 6)}
           </h1>
+          <h1>{accountBalance}</h1>
+          {/* <button className="btn btn-secondary">Button</button> */}
           <button
             className="btn btn-square btn-outline"
             onClick={() => {
-              setWalletProvider(undefined);
+              disconnect();
             }}
           >
             <svg
@@ -44,4 +49,4 @@ const WalletConnect = () => {
   );
 };
 
-export default WalletConnect;
+export default WalletConnect2;

@@ -1,49 +1,43 @@
 "use client";
 
-import { useEffect } from "react";
-import { AvailableProvider, useCardano } from "use-cardano";
+import { useCardano } from "@cardano-foundation/cardano-connect-with-wallet";
+import { NetworkType } from "@cardano-foundation/cardano-connect-with-wallet-core";
 import Image from "next/image";
 
 declare global {
   interface Window {
-    my_modal_2: any;
+    my_modal: any;
   }
 }
 
 const WalletModal = () => {
-  const {
-    availableProviders,
-    walletApi,
-    setWalletProvider,
-    account,
-    lucid,
-    setLucid
-  } = useCardano();
+  const { isConnected, connect, installedExtensions } = useCardano({
+    limitNetwork: NetworkType.TESTNET,
+  });
 
   return (
     <div>
-      {/* Open the modal using ID.showModal() method */}
       <button
         className="btn btn-outline"
-        onClick={() => window.my_modal_2.showModal()}
+        onClick={() => window.my_modal.showModal()}
       >
-        {account.address ? "CONNECTED" : "CONNECT"}
+        {isConnected ? "CONNECTED" : "CONNECT"}
       </button>
-      <dialog id="my_modal_2" className="modal">
+      <dialog id="my_modal" className="modal">
         <form method="dialog" className="modal-box">
           <div className="flex flex-col gap-3 sm:gap-6 lg:gap-8">
-            {availableProviders.map((provider: AvailableProvider) => (
-              <div key={provider.key} className="flex justify-between">
+            {installedExtensions.map((provider: string) => (
+              <div key={provider} className="flex justify-around">
                 <button
                   className="btn btn-outline"
-                  onClick={() => setWalletProvider(provider.key)}
+                  onClick={() => connect(provider)}
                 >
-                  {provider.name}
+                  {provider.toUpperCase()}
                 </button>
-                <span className="h-auto w-9">
+                <span className="h-auto w-20">
                   <Image
-                    src={provider.icon}
-                    alt={provider.key}
+                    src={window.cardano[provider].icon}
+                    alt={provider}
                     width={36}
                     height={10}
                   />
