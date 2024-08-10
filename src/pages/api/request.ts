@@ -30,7 +30,9 @@ export default async function handler(
       .newTx()
       .delegateTo(
         rewardAddress!,
-        "pool19ut4284xy9p82dd0cglzxweddfqw73yennkjk6mmp650chnr6lz"
+        process.env.NODE_ENV === "development"
+          ? process.env.POOL_ID_PREPROD!
+          : process.env.POOL_ID_MAINNET!
       )
       .complete();
     res.status(200).json({ tx: tx.toString() });

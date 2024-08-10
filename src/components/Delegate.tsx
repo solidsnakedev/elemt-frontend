@@ -21,12 +21,18 @@ const Delegate = () => {
         },
         body: JSON.stringify({ address: usedAddresses[0] }),
       });
-      const { tx } = await response.json();
-      const api = await window.cardano[enabledWallet].enable();
-      const lucid = (await Lucid.new(undefined, undefined)).selectWallet(api);
-      const signedTx = await lucid.fromTx(tx).sign().complete();
-      const txh = await signedTx.submit();
-      console.log(txh);
+      try {
+        const { tx } = await response.json();
+        const api = await window.cardano[enabledWallet].enable();
+        const lucid = (await Lucid.new(undefined, undefined)).selectWallet(api);
+        const signedTx = await lucid.fromTx(tx).sign().complete();
+        const txh = await signedTx.submit();
+        console.log(txh);
+        
+      } catch (error) {
+        console.log(error)
+        
+      }
     }
   };
 
