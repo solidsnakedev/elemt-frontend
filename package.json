@@ -11,6 +11,7 @@
   "dependencies": {
     "@cardano-foundation/cardano-connect-with-wallet": "^0.2.8",
     "@cardano-foundation/cardano-connect-with-wallet-core": "^0.2.4",
+    "@lucid-evolution/lucid": "^0.3.4",
     "@types/node": "20.11.16",
     "@types/react": "18.2.51",
     "@types/react-dom": "18.2.18",

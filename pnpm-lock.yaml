@@ -11,6 +11,9 @@ dependencies:
   '@cardano-foundation/cardano-connect-with-wallet-core':
     specifier: ^0.2.4
     version: 0.2.4
+  '@lucid-evolution/lucid':
+    specifier: ^0.3.4
+    version: 0.3.4(fast-check@3.21.0)
   '@types/node':
     specifier: 20.11.16
     version: 20.11.16
@@ -73,6 +76,14 @@ packages:
     dependencies:
       '@jridgewell/gen-mapping': 0.3.3
       '@jridgewell/trace-mapping': 0.3.22
+    dev: false
+
+  /@anastasia-labs/cardano-multiplatform-lib-browser@5.3.1-3:
+    resolution: {integrity: sha512-SQRufQIMjpzgwAgjrmw8UQ80rmgRakyjtYUUx0ayiPKpakFzCN3yFRe9MZY5kPsHes87Rj75xqpitXD1MfddrQ==}
+    dev: false
+
+  /@anastasia-labs/cardano-multiplatform-lib-nodejs@5.3.1-3:
+    resolution: {integrity: sha512-GZS9K6BJM0jJNN3m1brvq3KtSU/36tfiXnj0ChOwNZfCHU9pK0KgGRLhsN87jv6eJLEvbpr/QQr96zjHcwQIyg==}
     dev: false
 
   /@apideck/better-ajv-errors@0.3.6(ajv@8.12.0):
@@ -1798,6 +1809,37 @@ packages:
       - supports-color
     dev: false
 
+  /@effect/platform@0.59.3(@effect/schema@0.68.27)(effect@3.6.2):
+    resolution: {integrity: sha512-DHR4Hl+hhTCzjs1ykRIyzwaala4JMtPVnReLea29hn+M3fKzloic7UpyCkTO7aJdFjthUtAKcW2mr2lDtuqlDA==}
+    peerDependencies:
+      '@effect/schema': ^0.68.27
+      effect: ^3.5.7
+    dependencies:
+      '@effect/schema': 0.68.27(effect@3.6.2)
+      effect: 3.6.2
+      find-my-way-ts: 0.1.5
+      multipasta: 0.2.5
+    dev: false
+
+  /@effect/schema@0.66.16(effect@3.6.2)(fast-check@3.21.0):
+    resolution: {integrity: sha512-sT/k5NOgKslGPzs3DUaCFuM6g2JQoIIT8jpwEorAZooplPIMK2xIspr7ECz6pp6Dc7Wz/ppXGk7HVyGZQsIYEQ==}
+    peerDependencies:
+      effect: ^3.1.3
+      fast-check: ^3.13.2
+    dependencies:
+      effect: 3.6.2
+      fast-check: 3.21.0
+    dev: false
+
+  /@effect/schema@0.68.27(effect@3.6.2):
+    resolution: {integrity: sha512-/rmIb+4QaQTecdTfeYSZtNikIV+BeIbYDl/hpgBTaS96en7pKNW5hcygFQhdocjKguIL7Y/be+oUrVafWV60ew==}
+    peerDependencies:
+      effect: ^3.5.7
+    dependencies:
+      effect: 3.6.2
+      fast-check: 3.21.0
+    dev: false
+
   /@emotion/is-prop-valid@1.2.1:
     resolution: {integrity: sha512-61Mf7Ufx4aDxx1xlDeOm8aFFigGHE4z+0sKCa+IHCeZKiyP9RLD0Mmx7m8b9/Cf37f7NAvQOOJAbQQGVr5uERw==}
     dependencies:
@@ -1810,6 +1852,22 @@ packages:
 
   /@emotion/unitless@0.8.0:
     resolution: {integrity: sha512-VINS5vEYAscRl2ZUDiT3uMPlrFQupiKgHz5AA4bCH1miKBg4qtwkim1qPmJj/4WG6TreYMY111rEFsjupcOKHw==}
+    dev: false
+
+  /@emurgo/cardano-message-signing-browser@1.0.1:
+    resolution: {integrity: sha512-yC4Ymq44WR0bXO1wzxCoyc2W/RD1KSAla0oYhin7IYoVkp2raGp8wt7QNF4pDdNnTcejn5fyPyYY9dL4666H1w==}
+    dev: false
+
+  /@emurgo/cardano-message-signing-nodejs@1.0.1:
+    resolution: {integrity: sha512-PoKh1tQnJX18f8iEr8Jk1KXxKCn9eqaSslMI1pyOJvYRJhQVDLCh0+9YReufjp0oFJIY1ShcrR+4/WnECVZUKQ==}
+    dev: false
+
+  /@emurgo/cardano-serialization-lib-browser@11.5.0:
+    resolution: {integrity: sha512-qchOJ9NYDUz10tzs5r5QhP9hK0p+ZOlRiBwPdTAxqAYLw/8emYBkQQLaS8T1DF6EkeudyrgS00ym5Trw1fo4iA==}
+    dev: false
+
+  /@emurgo/cardano-serialization-lib-nodejs@11.5.0:
+    resolution: {integrity: sha512-IlVABlRgo9XaTR1NunwZpWcxnfEv04ba2l1vkUz4S1W7Jt36F4CtffP+jPeqBZGnAe+fnUwo0XjIJC3ZTNToNQ==}
     dev: false
 
   /@eslint-community/eslint-utils@4.4.0(eslint@8.56.0):
@@ -2185,6 +2243,119 @@ packages:
     resolution: {integrity: sha512-Hcv+nVC0kZnQ3tD9GVu5xSMR4VVYOteQIr/hwFPVEvPdlXqgGEuRjiheChHgdM+JyqdgNcmzZOX/tnl0JOiI7A==}
     dev: false
 
+  /@lucid-evolution/bip39@0.2.11:
+    resolution: {integrity: sha512-PLcNcpSFkxdW9tXw2XyTU8h3veTSR/bAHB0/SeciApFKpy2pf+MXbZp0AFBpaUrwR2RezXsdMpdZQlx7IhbiWw==}
+    dependencies:
+      '@lucid-evolution/core-utils': 0.1.9
+    dev: false
+
+  /@lucid-evolution/core-types@0.1.12:
+    resolution: {integrity: sha512-W3J/Sgm3qdsGEj+7q0Oxqk6NgAUDyBUVJnyQp+LckmFxAOO59otbX/xTq5EmtBt9vIVL1QK6zH6lPvBCfT+6Sw==}
+    dependencies:
+      '@anastasia-labs/cardano-multiplatform-lib-browser': 5.3.1-3
+      '@anastasia-labs/cardano-multiplatform-lib-nodejs': 5.3.1-3
+    dev: false
+
+  /@lucid-evolution/core-utils@0.1.9:
+    resolution: {integrity: sha512-n9obP2p0hwdCyD2mNfhAz6WQ38t+zcK+SZHl6CCXHYe/K8FVRMbi+TFX2W+VnyI1KJS+keyyM/xUJBFStT2Okw==}
+    dependencies:
+      '@anastasia-labs/cardano-multiplatform-lib-browser': 5.3.1-3
+      '@anastasia-labs/cardano-multiplatform-lib-nodejs': 5.3.1-3
+    dev: false
+
+  /@lucid-evolution/crc8@0.1.8:
+    resolution: {integrity: sha512-88+/S6n+sPgxYtG05rvbJDVb8MoFGzckkR3p26uGrzngYzlJGfxBWIzNhVwfI2mgINPo2C5lkZW3GYnfY0MjuA==}
+    dev: false
+
+  /@lucid-evolution/lucid@0.3.4(fast-check@3.21.0):
+    resolution: {integrity: sha512-RkmbrlVWRNKLcAhgRFELXaDDUdl4f37L+kKwD1SXohzWrrIspMXAokWwZPcaEbi18NMHvJY4sTozVN5FWgN9Yw==}
+    dependencies:
+      '@anastasia-labs/cardano-multiplatform-lib-browser': 5.3.1-3
+      '@anastasia-labs/cardano-multiplatform-lib-nodejs': 5.3.1-3
+      '@effect/schema': 0.66.16(effect@3.6.2)(fast-check@3.21.0)
+      '@emurgo/cardano-message-signing-nodejs': 1.0.1
+      '@lucid-evolution/bip39': 0.2.11
+      '@lucid-evolution/core-types': 0.1.12
+      '@lucid-evolution/core-utils': 0.1.9
+      '@lucid-evolution/plutus': 0.1.15
+      '@lucid-evolution/provider': 0.1.37
+      '@lucid-evolution/sign_data': 0.1.12
+      '@lucid-evolution/uplc': 0.2.9
+      '@lucid-evolution/utils': 0.1.28
+      '@lucid-evolution/wallet': 0.1.32
+      effect: 3.6.2
+    transitivePeerDependencies:
+      - fast-check
+    dev: false
+
+  /@lucid-evolution/plutus@0.1.15:
+    resolution: {integrity: sha512-kBv0nl7wqmIF2xp4qf41as6Rj0NkqvRQvVHOGbWI9jaFcQpSa4Tmgu3RDpIDBsKr2ZvLQskS/hTYHvpPtxS/CQ==}
+    dependencies:
+      '@anastasia-labs/cardano-multiplatform-lib-browser': 5.3.1-3
+      '@anastasia-labs/cardano-multiplatform-lib-nodejs': 5.3.1-3
+      '@lucid-evolution/core-types': 0.1.12
+      '@lucid-evolution/core-utils': 0.1.9
+      '@sinclair/typebox': 0.32.35
+    dev: false
+
+  /@lucid-evolution/provider@0.1.37:
+    resolution: {integrity: sha512-JCWUnvz0XPoao7UaotrhZodyAsCp0Za0QqwbuE7cgqylvWWJggoD+gptGdFcRLkWpa1iRxPQ741JFI2m7Fq4RQ==}
+    dependencies:
+      '@anastasia-labs/cardano-multiplatform-lib-browser': 5.3.1-3
+      '@anastasia-labs/cardano-multiplatform-lib-nodejs': 5.3.1-3
+      '@effect/platform': 0.59.3(@effect/schema@0.68.27)(effect@3.6.2)
+      '@effect/schema': 0.68.27(effect@3.6.2)
+      '@lucid-evolution/core-types': 0.1.12
+      '@lucid-evolution/core-utils': 0.1.9
+      '@lucid-evolution/utils': 0.1.28
+      '@lucid-evolution/wallet': 0.1.32
+      effect: 3.6.2
+    dev: false
+
+  /@lucid-evolution/sign_data@0.1.12:
+    resolution: {integrity: sha512-kWCZCZxJJQ3g0kxMeFv/kvjRd2IrNuiwtBHwov5yftH7HY8N+HRaMIgeEF0eoi2dD6LoAs/aTrGvL1x9EygX/w==}
+    dependencies:
+      '@anastasia-labs/cardano-multiplatform-lib-browser': 5.3.1-3
+      '@anastasia-labs/cardano-multiplatform-lib-nodejs': 5.3.1-3
+      '@emurgo/cardano-message-signing-browser': 1.0.1
+      '@emurgo/cardano-message-signing-nodejs': 1.0.1
+      '@lucid-evolution/core-types': 0.1.12
+      '@lucid-evolution/core-utils': 0.1.9
+    dev: false
+
+  /@lucid-evolution/uplc@0.2.9:
+    resolution: {integrity: sha512-99mEkH7rvgMAPrNzcjm5d0H2jDQKvIybH3SzLVq+n3JJB1OftVNStYGQ4BggSi1lup8VTGZ7Ptv8DPHszwsdhg==}
+    dev: false
+
+  /@lucid-evolution/utils@0.1.28:
+    resolution: {integrity: sha512-wqd1IWSweVyXj+8JXr6TIwPkqibVhs8Dawx+H59c1i54FhmW2m1Y/0t9aqcmYXLtKxrafBwYwLPJJTlqYEAh+w==}
+    dependencies:
+      '@anastasia-labs/cardano-multiplatform-lib-browser': 5.3.1-3
+      '@anastasia-labs/cardano-multiplatform-lib-nodejs': 5.3.1-3
+      '@effect/schema': 0.68.27(effect@3.6.2)
+      '@emurgo/cardano-serialization-lib-browser': 11.5.0
+      '@emurgo/cardano-serialization-lib-nodejs': 11.5.0
+      '@lucid-evolution/bip39': 0.2.11
+      '@lucid-evolution/core-types': 0.1.12
+      '@lucid-evolution/core-utils': 0.1.9
+      '@lucid-evolution/crc8': 0.1.8
+      '@lucid-evolution/plutus': 0.1.15
+      '@lucid-evolution/uplc': 0.2.9
+      cborg: 4.2.3
+      effect: 3.6.2
+    dev: false
+
+  /@lucid-evolution/wallet@0.1.32:
+    resolution: {integrity: sha512-cnLpDbLomh6RWXBrJ79hw0poYSohczz2+RJfHm2Fynig9m6jx4bNv9rUNNB0tljLwRe6Jwg0JNu2Gm2Q7WILWw==}
+    dependencies:
+      '@anastasia-labs/cardano-multiplatform-lib-nodejs': 5.3.1-3
+      '@lucid-evolution/bip39': 0.2.11
+      '@lucid-evolution/core-types': 0.1.12
+      '@lucid-evolution/core-utils': 0.1.9
+      '@lucid-evolution/sign_data': 0.1.12
+      '@lucid-evolution/utils': 0.1.28
+    dev: false
+
   /@next/env@14.1.0:
     resolution: {integrity: sha512-Py8zIo+02ht82brwwhTg36iogzFqGLPXlRGKQw5s+qP/kMNc4MAyDeEwBKDijk6zTIbegEgu8Qy7C1LboslQAw==}
     dev: false
@@ -2454,6 +2625,10 @@ packages:
 
   /@sinclair/typebox@0.24.51:
     resolution: {integrity: sha512-1P1OROm/rdubP5aFDSZQILU0vrLCJ4fvHt6EoqHEM+2D/G5MK3bIaymUKLit8Js9gbns5UyJnkP/TZROLw4tUA==}
+    dev: false
+
+  /@sinclair/typebox@0.32.35:
+    resolution: {integrity: sha512-Ul3YyOTU++to8cgNkttakC0dWvpERr6RYoHO2W47DLbFvrwBDJUY31B1sImH6JZSYc4Kt4PyHtoPNu+vL2r2dA==}
     dev: false
 
   /@sinonjs/commons@1.8.6:
@@ -4200,6 +4375,11 @@ packages:
     hasBin: true
     dev: false
 
+  /cborg@4.2.3:
+    resolution: {integrity: sha512-XBFbEJ6WMfn9L7woc2t+EzOxF8vGqddoopKBbrhIvZBt2WIUgSlT8xLmM6Aq1xv8eWt4yOSjwxWjYeuHU3CpJA==}
+    hasBin: true
+    dev: false
+
   /chalk@2.4.2:
     resolution: {integrity: sha512-Mti+f9lpJNcwF4tWV8/OrTTtF1gZi+f8FqlyAdouralcFWFQWF2+NgCHShjkCb+IFBLq9buZwE1xckQU4peSuQ==}
     engines: {node: '>=4'}
@@ -5212,6 +5392,10 @@ packages:
     resolution: {integrity: sha512-WMwm9LhRUo+WUaRN+vRuETqG89IgZphVSNkdFgeb6sS/E4OrDIN7t48CAewSHXc6C8lefD8KKfr5vY61brQlow==}
     dev: false
 
+  /effect@3.6.2:
+    resolution: {integrity: sha512-7ug9kTf14PWs5AojEEmB1Ay3YTHCcIZq92K0nOhze1VUsqENxICf06M2z0wfVbHwIqJFOdomasfTysxdu+Xi9A==}
+    dev: false
+
   /ejs@3.1.9:
     resolution: {integrity: sha512-rC+QVNMJWv+MtPgkt0y+0rVEIdbtxVADApW9JXrUVlzHetgcyczP/E7DJmWJ4fJCZF2cPcBk0laWO9ZHMG3DmQ==}
     engines: {node: '>=0.10.0'}
@@ -5992,6 +6176,13 @@ packages:
     engines: {'0': node >=0.6.0}
     dev: false
 
+  /fast-check@3.21.0:
+    resolution: {integrity: sha512-QpmbiqRFRZ+SIlBJh6xi5d/PgXciUc/xWKc4Vi2RWEHHIRx6oM3f0fWNna++zP9VB5HUBTObUK9gTKQP3vVcrQ==}
+    engines: {node: '>=8.0.0'}
+    dependencies:
+      pure-rand: 6.1.0
+    dev: false
+
   /fast-deep-equal@3.1.3:
     resolution: {integrity: sha512-f3qQ9oQy9j2AhBe/H9VC91wLmKBCCU/gDOnKNAYG5hswO7BLKj09Hc5HYNz9cGI++xlpDCIgDaitVs03ATR84Q==}
 
@@ -6123,6 +6314,10 @@ packages:
       commondir: 1.0.1
       make-dir: 3.1.0
       pkg-dir: 4.2.0
+    dev: false
+
+  /find-my-way-ts@0.1.5:
+    resolution: {integrity: sha512-4GOTMrpGQVzsCH2ruUn2vmwzV/02zF4q+ybhCIrw/Rkt3L8KWcycdC6aJMctJzwN4fXD4SD5F/4B9Sksh5rE0A==}
     dev: false
 
   /find-up@3.0.0:
@@ -8372,6 +8567,10 @@ packages:
       thunky: 1.1.0
     dev: false
 
+  /multipasta@0.2.5:
+    resolution: {integrity: sha512-c8eMDb1WwZcE02WVjHoOmUVk7fnKU/RmUcosHACglrWAuPQsEJv+E8430sXj6jNc1jHw0zrS16aCjQh4BcEb4A==}
+    dev: false
+
   /mz@2.7.0:
     resolution: {integrity: sha512-z81GNO7nnYMEhrGh9LeymoE4+Yr0Wn5McHIZMK5cfQCl+NDX08sCZgUc9/6MHni9IWuFLm1Z3HTCXu2z9fN62Q==}
     dependencies:
@@ -9734,6 +9933,10 @@ packages:
   /punycode@2.3.1:
     resolution: {integrity: sha512-vYt7UD1U9Wg6138shLtLOvdAu+8DsC/ilFtEVHcH+wydcSpNE20AfSOduf6MkRFahL5FY7X1oU7nKVZFtfq8Fg==}
     engines: {node: '>=6'}
+
+  /pure-rand@6.1.0:
+    resolution: {integrity: sha512-bVWawvoZoBYpp6yIoQtQXHZjmz35RSVHnUOTefl8Vcjr8snTPY1wnpSPMWekcFwbxI6gtmT7rSYPFvz71ldiOA==}
+    dev: false
 
   /pvtsutils@1.3.5:
     resolution: {integrity: sha512-ARvb14YB9Nm2Xi6nBq1ZX6dAM0FsJnuk+31aUp4TrcZEdKUlSqOqsxJHUPJDNE3qiIp+iUPEIeR6Je/tgV7zsA==}

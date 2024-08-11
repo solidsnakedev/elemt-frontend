@@ -1,4 +1,4 @@
-import { Blockfrost, Lucid } from "lucid-cardano";
+import { Blockfrost, Lucid } from "@lucid-evolution/lucid";
 import { NextApiRequest, NextApiResponse } from "next";
 
 export default async function handler(
@@ -13,19 +13,20 @@ export default async function handler(
           process.env.API_URL_PREPROD!,
           process.env.BLOCKFROST_KEY_PREPROD!
         );
-        return Lucid.new(b, "Preprod");
+        return Lucid(b, "Preprod");
       } else {
         const b = new Blockfrost(
           process.env.API_URL_MAINNET!,
           process.env.BLOCKFROST_KEY_MAINNET!
         );
-        return Lucid.new(b, "Mainnet");
+        return Lucid(b, "Mainnet");
       }
     };
     const lucid = await initLucid();
     const data = req.body;
-    lucid.selectWalletFrom({ address: data.address });
-    const rewardAddress = await lucid.wallet.rewardAddress();
+
+    lucid.selectWallet.fromAddress(data.address, [])
+    const rewardAddress = await lucid.wallet().rewardAddress();
     const tx = await lucid
       .newTx()
       .delegateTo(
@@ -35,8 +36,15 @@ export default async function handler(
           : process.env.POOL_ID_MAINNET!
       )
       .complete();
-    res.status(200).json({ tx: tx.toString() });
+    res.status(200).json({ tx: tx.toCBOR() });
   } else {
     // Handle any other HTTP method
   }
 }
+
+export const parse = (json: string) =>
+  JSON.parse(json, (key, value) =>
+    typeof value === "string" && /^\d+n$/.test(value)
+      ? BigInt(value.slice(0, -1))
+      : value
+  );
